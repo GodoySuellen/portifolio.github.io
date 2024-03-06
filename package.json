@@ -6,9 +6,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "npm run build:css && npm run build:js",
-    "build:css": "sass src/styles/main.scss dist/styles/main.css",
-    "build:js": "babel src/scripts --out-dir dist/scripts"
   },
   "repository": {
     "type": "git",
