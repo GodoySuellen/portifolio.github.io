@@ -14,8 +14,9 @@ app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules/bootstra
 
 // Configurar a porta
 const PORT = process.env.PORT || 80;
-
-// Iniciar o servidor
-app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  // Iniciar o servidor apenas em ambiente de desenvolvimento
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+  });
+}
