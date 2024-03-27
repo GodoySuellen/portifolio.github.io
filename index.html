@@ -191,49 +191,45 @@
           <h2>Contato</h2>
           <p>Me deixe uma mensagem para que eu possa entrar em contato!</p>
         </div>
-        <div class="row d-flex justify-content-center align-items-center">
+        <div class="row d-flex flex-column justify-content-center align-items-center">
           <div class="col-sm col-md-12 col-xl-12 col-xxl-12">
             <div class="card">
               <div class="card-body p-5">
 
-                <form action="http://localhost:23336/api/contact" method="POST" data-form novalidate>
+                <form action="https://api.suellengodoy.com.br/api/contact" method="POST" data-form novalidate>
 
                   <div class="row">
-                    <div class="col">
+                    <div class="col-sm col-md col-xl col-xxl">
                       <label for="name">Nome</label>
                       <input type="text" name="name" id="name"  required />
                     </div>
-                    <div class="col">
+                    <div class="col-sm col-md col-xl col-xxl">
                       <label for="email">E-mail</label>
                       <input type="email" name="email" id="email" required />
                     </div>
-                    <div class="col">
+                    <div class="col-sm col-md col-xl col-xxl">
                       <label for="phone">E-mail</label>
                       <input type="text" name="phone" id="phone" required />
                     </div>
                   </div>
 
                   <div class="row">
-                    <div class="col">
+                    <div class="col-sm col-md col-xl col-xxl">
                       <label for="subject">Assunto</label>
                       <input type="text" name="subject" id="subject" required />
                     </div>
-                    <div class="col">
+                    <div class="col-sm col-md-12 col-xl-12 col-xxl-12">
                       <label for="message">Mensagem</label>
                       <textarea name="message" id="message" required></textarea>
                     </div>
                   </div>
 
                   <div class="row">
-                    <div class="col-2">
+                    <div class="col-sm col-md-2 col-xl-2 col-xxl-2">
                       <button type="submit" data-button>Enviar</button>
                     </div>
                   </div>
-
-
-
-
-
+                  
                 </form>
 
               </div>
