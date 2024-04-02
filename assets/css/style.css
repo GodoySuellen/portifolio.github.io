@@ -860,12 +860,17 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-
+.contact {
+  display: flex;
+  justify-content: center;
+}
 .card {
+  width: 70%;
   background: #72707048;
   color: #FFF;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  margin: auto;
 }
 
 form {
@@ -875,13 +880,13 @@ form {
 label,
 input,
 textarea,
-button {
+.enviar {
   display: block;
 }
 
 input,
 textarea,
-button {
+.enviar {
   width: 100%;
   font: inherit;
   padding: 0.5rem;
@@ -913,11 +918,11 @@ label {
 }
 
 textarea {
-  min-height: 2.5rem;
+  min-height: 5.5rem;
   resize: vertical;
 }
 
-button {
+.enviar {
   border: none;
   border-radius: 99px;
   color: white;
@@ -926,13 +931,13 @@ button {
   transition: 0.3s;
 }
 
-button:hover,
-button:focus {
+.enviar:hover,
+.enviar:focus {
   outline: none;
   background: #149ddd;
 }
 
-button:disabled {
+.enviar:disabled {
   cursor: not-allowed;
   color: #149ddd;
   /*background: rgba(125, 159, 238, 0.368);*/
@@ -987,3 +992,47 @@ button:disabled {
     padding-right: 20px 15px;
   }
 }
+
+
+
+
+
+
+
+
+.validator {
+  margin-left: 20px;
+  margin-top: 45px;
+  display: none;
+  letter-spacing: 4px;
+  font-family: 'Blinker', sans-serif;
+  background: linear-gradient(45deg, #ed691c 0%, #FD246B 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  text-transform: uppercase;
+  }
+  
+  .send {
+  display: none;
+  margin-left: 20px;
+  margin-top: 45px;
+  letter-spacing: 4px;
+  font-family: 'Blinker', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: green;
+  }
+
+  .error {
+    display: none;
+    margin-left: 20px;
+    margin-top: 45px;
+    letter-spacing: 4px;
+    font-family: 'Blinker', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: red;
+    }
+  
+  

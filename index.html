@@ -196,7 +196,7 @@
             <div class="card">
               <div class="card-body p-5">
 
-                <form action="https://api.suellengodoy.com.br/api/contact" method="POST" data-form novalidate>
+                <form>
 
                   <div class="row">
                     <div class="col-sm col-md col-xl col-xxl">
@@ -224,9 +224,22 @@
                     </div>
                   </div>
 
-                  <div class="row">
+                  <!--div class="row">
                     <div class="col-sm col-md-2 col-xl-2 col-xxl-2">
                       <button type="submit" data-button>Enviar</button>
+                    </div>
+                  </div-->
+
+                  <div class="row mb-4">
+                    <button id="send-data" class="btn enviar">ENVIAR</button>
+                    <div class="text-center">
+                      <label class="validator text-center">Preencha todos os campos!</label>
+                    </div>
+                    <div class="text-center">
+                      <label class="send text-center">Enviado com sucesso!</label>
+                    </div>
+                    <div class="text-center">
+                      <label class="error text-center"></label>
                     </div>
                   </div>
                   
@@ -243,9 +256,70 @@
     <!-- End Contact Section -->
   </main>
 
+
+  <script type="text/javascript">
+
+$(document).ready(function() {
+ 
+ $('#phone').mask('(00) 0000-00009');
+ $('#phone').blur(function(event) {
+   if($(this).val().length == 15){ // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
+       $('#phone').mask('(00) 00000-0009');
+   } else {
+       $('#phone').mask('(00) 0000-00009');
+   }
+ });
+
+ 
+ $('form').submit(function(e){
+   e.preventDefault();
+   const data  = $('form').serializeArray()
+   const name  = $('#name').val()
+   const email = $('#email').val()
+   const phone = $('#phone').val()
+   const subject = $('#subject').val()
+   const message = $('#message').val()
+
+   const values = {
+     name: name,
+     email: email,
+     phone: phone,
+     subject: subject,
+     message: message
+   }
+
+
+   if (name === '' || email === '' || phone === '') {
+     $('.validator').css("display","inline-block");
+   } else {
+     $('.validator').css("display","none");
+     $('#send-data').attr("disabled", true);
+    
+     $.ajax({
+    url: 'https://api.suellengodoy.com.br/email',
+    type: 'post',
+    data: values,
+    success: function(response) {
+        console.log(response);
+        setTimeout(function() {
+            $('.send').css("display", "inline-block");
+        }, 1500);
+    },
+    error: function(xhr, status, error) {
+        console.error(xhr.responseText);
+        $('.error').text('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+        $('.error').css("display", "block");
+    }
+});
+   }
+ });
+});
+
+  </script>
+
   <!-- MAIN -->
   <script src="./assets/js/main.js"></script>
-  <script src="./forms/contact.js"></script>
+  <!--script src="./forms/contact.js"></script-->
 
 
   <!-- Bootstrap JS -->
