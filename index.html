@@ -19,14 +19,8 @@
 
   <!-- Bibliotecas Externas-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-
-    <!-- Cards -->
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -137,17 +131,13 @@
     </section><!-- End About Section -->
 
     <!-- ======= Experiencia Section ======= -->
-
     <section id="resume" class="resume">
       <div class="container">
-
         <div class="section-title">
           <h2>Experiência Profissional</h2>
         </div>
-
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-
             <div class="resume-item">
               <h4>Desenvolvedor Web Junior</h4>
               <h5>agosto de 2022 - abril de 2024</h5>
@@ -192,8 +182,6 @@
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-
             <div class="resume-item">
               <h4>Assistente Administrativo de RH</h4>
               <h5>janeiro de 2019 - julho de 2020</h5>
@@ -210,7 +198,6 @@
                 <li>Auxílio no departamento de vendas.</li>
               </ul>
             </div>
-
             <div class="resume-item">
               <h4>Analista de Suporte</h4>
               <h5>abril de 2016 - dezembro de 2018</h5>
@@ -224,62 +211,30 @@
                 <li>Análise de processos internos da gestão.</li>
               </ul>
             </div>
-
           </div>
         </div>
-
       </div>
     </section><!-- End Resume Section -->
-
 
     <!-- ======= Projects Section ======= -->
     <section id="project" class="project">
       <div class="container">
-
         <div class="section-title">
           <h2>Projetos</h2>
           <p>Biblioteca de Projetos desenvolvidos a partir dos conhecimentos adquiridos.</p>
         </div>
-
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="bi bi-filetype-js"></i></div>
             <h4 class="title"><a href="https://github.com/GodoySuellen/Texto-Animado" target="_blank">Texto Animado</a>
             </h4>
             <p class="description">Exemplo de animação de texto em Javascript</p>
-          </div>
-          <!--div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-bar-chart"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="bi bi-brightness-high"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div-->
+          </div>         
         </div>
-
       </div>
     </section><!-- End Project Section -->
 
     <!-- ======= Contact Section ======= -->
-
     <section id="contatc" class="contact">
       <div class="container">
         <div class="section-title">
@@ -290,9 +245,7 @@
           <div class="col-sm col-md-12 col-xl-12 col-xxl-12">
             <div class="card">
               <div class="card-body p-5">
-
                 <form>
-
                   <div class="row">
                     <div class="col-sm col-md col-xl col-xxl">
                       <label for="name">Nome</label>
@@ -304,10 +257,9 @@
                     </div>
                     <div class="col-sm col-md col-xl col-xxl">
                       <label for="phone">Telefone</label>
-                      <input type="text" name="phone" id="phone" required />
+                      <input type="text" name="phone" id="phone" mask="000.000.000-00||00.000.000/0000-00" required />
                     </div>
                   </div>
-
                   <div class="row">
                     <div class="col-sm col-md col-xl col-xxl">
                       <label for="subject">Assunto</label>
@@ -318,7 +270,6 @@
                       <textarea name="message" id="message" required></textarea>
                     </div>
                   </div>
-
                   <div class="row mb-4">
                     <button id="send-data" class="btn enviar">ENVIAR</button>
                     <div class="text-center">
@@ -331,47 +282,32 @@
                       <label class="error text-center"></label>
                     </div>
                   </div>
-
                 </form>
-
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
     <!-- End Contact Section -->
   </main>
 
-
-
-
   <script type="text/javascript">
-    $("#phone").mask("(00) 0000-00009");
-    $("#phone").blur(function (event) {
-      if ($(this).val().length == 15) {
-        // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
-        $("#phone").mask("(00) 00000-0009");
-      } else {
-        $("#phone").mask("(00) 0000-00009");
-      }
+    $(document).ready(function () {
+      $('#phone').inputmask({
+        mask: ['(99) 9999-9999', '(99) 99999-9999'],
+        keepStatic: true 
+      });
     });
   </script>
 
-
   <script type="text/javascript">
-
     $(document).ready(function () {
-
-      $('#phone').mask('(00) 0000-00009');
-      $('#phone').blur(function (event) {
-        if ($(this).val().length == 15) { // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
-          $('#phone').mask('(00) 00000-0009');
-        } else {
-          $('#phone').mask('(00) 0000-00009');          
-        }
+      $(document).ready(function () {
+        $('#phone').inputmask({
+          mask: ['(99) 9999-9999', '(99) 99999-9999'],
+          keepStatic: true 
+        });
       });
 
       $('form').submit(function (e) {
@@ -391,9 +327,6 @@
           message: message
         }
 
-
-
-
         if (name === '' || email === '' || phone === '') {
           $('.validator').css("display", "inline-block");
         } else {
@@ -401,13 +334,26 @@
           $('#send-data').attr("disabled", true);
 
           $.ajax({
-            //url: 'https://www.api.suellengodoy.com.br/users',
-            url: 'http://localhost:3000/users',
+            url: 'https://www.api.suellengodoy.com.br/users',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(values),
             success: function (response) {
               console.log(response);
+
+              $.ajax({
+                url: 'https://www.api.suellengodoy.com.br/email',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(values),
+                success: function (response) {
+
+                },
+                error: function (xhr, status, error) {
+                  console.error(xhr.responseText);
+                }
+              })
+
               setTimeout(function () {
                 $('.send').css("display", "inline-block");
               }, 1500);
@@ -428,7 +374,6 @@
   <script src="./assets/js/main.js"></script>
   <!--script src="./forms/contact.js"></script-->
 
-
   <!-- Bootstrap JS -->
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -437,11 +382,5 @@
   <script>
     AOS.init();
   </script>
-
-
-
-
-
 </body>
-
 </html>
