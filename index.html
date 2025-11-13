@@ -79,8 +79,7 @@
           <p class="lead">Bem-vindo ao meu portfólio digital!</p></br>
 
           <p>Sou Suellen Godoy, com pouco mais de 1 ano de experiência na área de Front-End,
-            uma apaixonada por tecnologia. Desde os meus primeiros passos na programação, encontrei minha vocação na
-            criação de soluções inovadoras que combinam estética visual e funcionalidade robusta.</p></br>
+            uma apaixonada por tecnologia. Desde os meus primeiros passos na programação, encontrei minha vocação na criação de soluções inovadoras que combinam estética visual e funcionalidade robusta.</p></br>
 
           <p>Com uma experiência em tecnologias como HTML, CSS, JavaScript e frameworks como Bootstrap e Angular,
             estou constantemente explorando novas técnicas e tendências para aprimorar minhas habilidades e oferecer aos
@@ -117,7 +116,9 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Idade:</strong> <span>38</span></li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i> <strong>Idade:</strong>     <p id="resultado"></p>
+                  </li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>suellenfgodoy@gmail.com</span>
                   </li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Formação:</strong> <span>Cursando Superior</span></li>
@@ -337,8 +338,34 @@
         </div>
       </div>
     </section>
+
+    <label for="dataNascimento">Data de Nascimento:</label>
+    <input type="date" id="dataNascimento">
+    <button onclick="calcularIdade()">Calcular</button>
+    <p id="resultado"></p>
     <!-- End Contact Section -->
   </main>
+
+  <script>
+    window.onload = function () {
+      const dataNascimento = "1985-10-01"; 
+      calcularIdade(dataNascimento);
+    };
+
+    function calcularIdade(dataNascimento) {
+      const hoje = new Date();
+      const nascimento = new Date(dataNascimento);
+
+      let idade = hoje.getFullYear() - nascimento.getFullYear();
+      const mes = hoje.getMonth() - nascimento.getMonth();
+
+      if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+        idade--;
+      }
+
+      document.getElementById("resultado").textContent = `${idade} anos`;
+    }
+  </script>
 
   <script type="text/javascript">
     $(document).ready(function () {
